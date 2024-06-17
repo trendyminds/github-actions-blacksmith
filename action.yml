@@ -1,0 +1,39 @@
+name: 'Blacksmith'
+description: 'Provision a review app for your pull request on Laravel Forge'
+inputs:
+  event:
+    description: 'The type of action being ran'
+    required: true
+  app_name:
+    description: 'The name of the app to use for the domain, database, etc.'
+    required: true
+  pr_number:
+    description: 'The PR number for the review app'
+    required: true
+  php_version:
+    description: 'Which version of PHP to use for your app'
+    required: false
+    default: 'php83'
+  doc_root:
+    description: 'The document root of your application'
+    required: false
+    default: '/public'
+  aliases:
+    description: 'An array of domains that should also point to the site'
+    required: false
+  user:
+    description: 'The SSH user to use for the connection'
+    required: false
+    default: 'forge'
+  host:
+    description: 'The host address to use for the connection'
+    required: true
+  key:
+    description: 'The SSH key to use for the connection'
+    required: true
+  path:
+    description: 'The path to the Blacksmith app on the server'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
