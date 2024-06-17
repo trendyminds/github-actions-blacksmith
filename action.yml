@@ -21,6 +21,10 @@ inputs:
   aliases:
     description: 'An array of domains that should also point to the site'
     required: false
+  disable_ssl:
+    description: 'Allows you to disable SSL for the review app'
+    required: false
+    default: false
   user:
     description: 'The SSH user to use for the connection'
     required: false
