@@ -15,6 +15,10 @@ chmod 700 "$SSHPATH"
 chmod 600 "$SSHPATH/known_hosts"
 chmod 600 "$SSHPATH/deploy_key"
 
+echo "================================"
+echo $INPUT_DISABLE_SSL
+echo "================================"
+
 # If INPUT_EVENT is closed, we want to delete the sandbox
 if [[ $INPUT_EVENT = "closed" ]]; then
   COMMAND="php artisan sandbox:triage $INPUT_APP_NAME $INPUT_PR_NUMBER"
