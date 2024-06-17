@@ -25,7 +25,7 @@ else
   # Conditionally add the optional parameters
   [[ ! -z "$INPUT_PHP_VERSION" ]] && COMMAND="${COMMAND} --php=$INPUT_PHP_VERSION"
   [[ ! -z "$INPUT_DOC_ROOT" ]] && COMMAND="${COMMAND} --doc_root=$INPUT_DOC_ROOT"
-  [[ "$INPUT_DISABLE_SSL" = "true" ]] && COMMAND="${COMMAND} --disable-ssl"
+  [[ "$INPUT_DISABLE_SSL" = "true" ]] && COMMAND="${COMMAND} --disable_ssl"
 
   # Append the aliases
   for domain in $INPUT_ALIASES; do
